@@ -3,3 +3,7 @@ provider "aws" {
   secret_key = ""
   region     = ""
 }
+
+module "sqs" {
+  source = "./modules"
+}
