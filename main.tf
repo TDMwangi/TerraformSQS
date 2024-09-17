@@ -13,4 +13,6 @@ module "sqs" {
   delivery_delay     = 0
   max_message_size   = 2048
   wait_time          = 0
+
+  enable-server-side-encryption = true
 }
