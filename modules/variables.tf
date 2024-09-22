@@ -17,3 +17,8 @@ variable "delivery_delay" {
   description = "The time delivery of all messages in the queue will be delayed. The default is 0 seconds"
   type        = number
 }
+
+variable "max_message_size" {
+  description = "How many bytes a message can contain before SQS rejects it. The default is 262144 (256 KiB)"
+  type        = number
+}
