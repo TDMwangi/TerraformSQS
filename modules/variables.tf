@@ -27,3 +27,8 @@ variable "wait_time" {
   description = "The time for which a ReceiveMessage call will wait for a message to arrive. The default is 0 seconds"
   type        = number
 }
+
+variable "enable-server-side-encryption" {
+  description = "Enable server-side encryption with SQS-owned encryption keys"
+  type        = bool
+}
