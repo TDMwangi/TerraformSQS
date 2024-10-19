@@ -5,4 +5,6 @@ resource "aws_sqs_queue" "sqs_queue" {
   delay_seconds              = var.delivery_delay
   max_message_size           = var.max_message_size
   receive_wait_time_seconds  = var.wait_time
+
+  sqs_managed_sse_enabled = var.enable-server-side-encryption
 }
