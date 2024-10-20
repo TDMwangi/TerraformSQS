@@ -8,3 +8,9 @@ resource "aws_sqs_queue" "sqs_queue" {
 
   sqs_managed_sse_enabled = var.enable-server-side-encryption
 }
+
+data "aws_iam_policy_document" "sqs_policy_document" {
+  statement {
+    effect = "Allow"
+  }
+}
