@@ -12,5 +12,13 @@ resource "aws_sqs_queue" "sqs_queue" {
 data "aws_iam_policy_document" "sqs_policy_document" {
   statement {
     effect = "Allow"
+
+    principals {
+      type        = "*"
+      identifiers = ["*"]
+    }
+
+    actions   = ["SQS:*"]
+    resources = [aws_sqs_queue.sqs_queue.arn]
   }
 }
