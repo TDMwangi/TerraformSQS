@@ -22,3 +22,8 @@ data "aws_iam_policy_document" "sqs_policy_document" {
     resources = [aws_sqs_queue.sqs_queue.arn]
   }
 }
+
+resource "aws_sqs_queue_policy" "sqs_queue_policy" {
+  queue_url = aws_sqs_queue.sqs_queue.id
+  policy    = data.aws_iam_policy_document.sqs_policy_document.json
+}
